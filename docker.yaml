@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myresume
+  labels: 
+    app: MyResume
+spec:
+  selector:
+    matchLabels:
+      app: MyResume
+  replicas: 5
+  template:
+    metadata:
+      name: MyResumename
+      labels:
+        app: MyResume
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
+        
